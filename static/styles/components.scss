@@ -1,0 +1,15 @@
+.title {
+  font-family: "Avenir Next", "Muli", sans-serif;
+  text-transform: uppercase;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  padding: 3rem;
+
+  .left {
+    align-self: flex-start;
+    margin-right: 5%;
+  }
+}

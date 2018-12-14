@@ -1,0 +1,151 @@
+/* includes */
+
+main {
+  padding-top: 76px;
+}
+
+#nav {
+  position: fixed;
+  background: #f6f6f6;
+
+  width: calc(100% - 2.4rem);
+  height: 76px;
+  box-shadow: 2px 2px 5px #aaa;
+  display: inline-block;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  text-transform: uppercase;
+  list-style-type: none;
+
+  * {
+    margin: 0;
+  }
+
+  #logo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: -1.2rem;
+
+    .title {
+      font-size: 2.5em;
+      letter-spacing: 5px;
+      line-height: 0.8;
+      font-weight: 700;
+    }
+
+    #blurb {
+      font-size: 1.063em;
+    }
+  }
+
+  li {
+    margin: 0;
+    padding: 0;
+    float: left;
+  }
+
+  #links {
+    a {
+      -webkit-transition: background-color .3s;
+      transition: background-color .3s;
+      display: block;
+      padding: 0 2vw;
+      line-height: 76px;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+}
+
+footer {
+  background-color: #21618c;
+  color: #eee;
+
+  #logo-text {
+    text-align: left;
+    display: flex;
+    text-transform: uppercase;
+    flex-direction: column;
+
+    .title {
+      font-size: 3em;
+      letter-spacing: 4px;
+      line-height: 0.8;
+    }
+
+    #blurb {
+      font-size: 1.2em;
+      letter-spacing: 1px;
+      font-weight: 300;
+    }
+
+  }
+
+  .column {
+    h5 {
+      text-transform: uppercase;
+      font-size: 1.5em;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+
+    .mdi-set {
+      display: flex;
+      flex-direction: row;
+
+      a {
+        font-size: 3em;
+        margin: 1rem;
+      }
+    }
+  }
+}
+
+/* index */
+
+#intro {
+  text-align: center;
+  padding: 5rem;
+  flex-direction: column;
+
+  background-image: url('https://cdn.pbrd.co/images/HNjLWSA.png');
+  background-repeat: no-repeat;
+  background-size: auto 200%;
+  background-position: left center;
+}
+
+#project {
+  background-color: #2e86c1;
+  color: #eee;
+
+  .text {
+    align-self: flex-start;
+    margin-right: 5%;
+  }
+
+  img {
+    max-width: 40%;
+  }
+}
+
+#robots {
+  background-color: #85c1e9;
+  color: #fff;
+
+  .title {
+    text-align: center;
+  }
+
+  * {
+    flex: 50%;
+  }
+}

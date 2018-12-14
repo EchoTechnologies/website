@@ -1,0 +1,35 @@
+{
+  "name": "echotechnologies.org",
+  "version": "1.0.0",
+  "description": "Single-page web application for Echo Technologies and the Engineering Design and Development course",
+  "main": "./src/index.js",
+  "engines": {
+    "node": ">=8"
+  },
+  "scripts": {
+    "dev": "webpack-dev-server --progress --mode development --config webpack.config.dev.js",
+    "build": "webpack -p --progress --mode production --config webpack.config.build.js"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.1.5",
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^1.0.0",
+    "file-loader": "^2.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.4.2",
+    "node-sass": "^4.9.3",
+    "postcss-loader": "^3.0.0",
+    "pug": "^2.0.3",
+    "pug-loader": "^2.4.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.0",
+    "url-loader": "^1.1.1",
+    "webpack": "^4.17.2",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.7",
+    "webpack-merge": "^4.1.4"
+  },
+  "repository": "https://github.com/echotechnologies/website",
+  "author": "Echo Technologies <echotechnology2019@gmail.com>",
+  "license": "Apache-2.0"
+}
