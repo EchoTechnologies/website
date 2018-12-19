@@ -10,7 +10,10 @@ main {
 
   width: calc(100% - 2.4rem);
   height: 76px;
+
   box-shadow: 2px 2px 5px #aaa;
+  z-index: 99;
+
   display: inline-block;
   overflow: hidden;
 
@@ -117,7 +120,7 @@ footer {
   padding: 5rem;
   flex-direction: column;
 
-  background-image: url('https://cdn.pbrd.co/images/HNjLWSA.png');
+  // background-image: url('https://cdn.pbrd.co/images/HNjLWSA.png');
   background-repeat: no-repeat;
   background-size: auto 200%;
   background-position: left center;
