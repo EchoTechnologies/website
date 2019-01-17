@@ -1,0 +1,59 @@
+@media only screen and (max-width: 800px) {
+    #nav {
+        justify-content: center !important;
+
+        #logo-text {
+            margin-left: -2.5rem !important;
+        }
+
+        #links {
+           display: none;
+        }
+
+        #sidenav-trigger {
+            display: block !important;
+        }
+    }
+
+    .section {
+        flex-direction: column;
+        padding: 2rem 5%;
+
+        & > * {
+            text-align: center;
+        }
+
+        .left {
+            margin-right: 0;
+        }
+
+        .column,
+        .right {
+            margin-top: 1rem;
+        }
+
+        &#intro {
+            padding: 5%;
+
+            h1 {
+                margin-bottom: 0.25em;
+            }
+        }
+
+        &#project {
+            text-align: center;
+
+            img {
+                margin-top: 2rem;
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    h1,
+    h2 {
+        word-break: break-all;
+    }
+}

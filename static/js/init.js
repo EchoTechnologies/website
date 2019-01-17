@@ -22,3 +22,15 @@ function trigger() {
   }
   setTimeout(() => $.ripple.destroy(), 5000);
 }
+
+$('#sidenav-trigger').click(() => {
+  $('#sidenav').animate({width: '100%'});
+  $('#backdrop').show();
+  $('body').css({overflow: 'hidden'});
+});
+
+$('#close, #backdrop').click(() => {
+  $('#sidenav').animate({width: '0'});
+  $('#backdrop').hide();
+  $('body').css({overflow: 'scroll'});
+});

@@ -52,19 +52,55 @@ main {
     float: left;
   }
 
-  #links {
-    a {
-      -webkit-transition: background-color .3s;
-      transition: background-color .3s;
-      display: block;
-      padding: 0 2vw;
-      line-height: 76px;
+  #sidenav-trigger {
+    display: none;
+    position: absolute;
+    left: 1.5rem;
+    font-size: 2em;
+  }
+}
 
-      &:hover {
-        background-color: rgba(0, 0, 0, 0.1);
-      }
+#links {
+  a {
+    -webkit-transition: background-color .3s;
+    transition: background-color .3s;
+    display: block;
+    padding: 0 2vw;
+    line-height: 76px;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.1);
     }
   }
+}
+
+#sidenav {
+  width: 0;
+  position: fixed;
+  z-index: 100;
+  padding: 0;
+  max-width: 300px;
+  height: 100vh;
+  background-color: #f5f5f5;
+  list-style-type: none;
+  overflow: scroll;
+
+  #close {
+    text-align: right;
+    font-size: 2em;
+    margin-left: calc(100% - 1em);
+  }
+}
+
+#backdrop {
+  display: none;
+  background-color: hsla(0, 0%, 20%, 0.2);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
 }
 
 footer {
