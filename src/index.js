@@ -4,3 +4,4 @@ import 'styles/media.scss';
 import 'styles/sections.scss';
 
 import 'js/init.js';
+import 'js/hashchange.js';

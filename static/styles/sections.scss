@@ -155,11 +155,6 @@ footer {
   text-align: center;
   padding: 5rem;
   flex-direction: column;
-
-  // background-image: url('https://cdn.pbrd.co/images/HNjLWSA.png');
-  background-repeat: no-repeat;
-  background-size: auto 200%;
-  background-position: left center;
 }
 
 #project {
@@ -186,5 +181,13 @@ footer {
 
   * {
     flex: 50%;
+  }
+}
+
+/* about */
+
+#about {
+  img {
+    margin-top: 2rem;
   }
 }
