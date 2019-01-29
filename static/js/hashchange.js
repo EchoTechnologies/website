@@ -3,7 +3,7 @@ let loading = null;
 
 const fetchPage = (path, callback) => {
   $.get(path, function (res) {
-    const $html = $(res)[3];
+    const $html = $(res)[4];
     callback($html.innerHTML.trim());
   });
 };

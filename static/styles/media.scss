@@ -52,8 +52,15 @@
 }
 
 @media only screen and (max-width: 414px) {
-    h1,
-    h2 {
-        word-break: break-all;
-    }
+  h1 {
+    font-size: 3em;
+  }
+
+  h2 {
+    font-size: 2.2em;
+  }
+
+  #sidenav {
+    max-width: 80% !important;
+  }
 }

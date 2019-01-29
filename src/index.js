@@ -5,3 +5,5 @@ import 'styles/sections.scss';
 
 import 'js/init.js';
 import 'js/hashchange.js';
+
+import 'images/echo-group.jpeg';
