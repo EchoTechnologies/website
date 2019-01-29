@@ -35,7 +35,7 @@ module.exports = {
         test: /\.(jpe?g|png)$/,
         loader: 'file-loader',
         options: {
-          name: '[path][name].[ext]'
+          name: 'images/[name].[ext]'
         }
       },
       {
