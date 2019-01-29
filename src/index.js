@@ -6,4 +6,5 @@ import 'styles/sections.scss';
 import 'js/init.js';
 import 'js/hashchange.js';
 
+import 'images/azorian.png';
 import 'images/teampic1.jpg';
