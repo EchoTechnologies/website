@@ -8,3 +8,4 @@ import 'js/hashchange.js';
 
 import 'images/azorian.png';
 import 'images/teampic1.jpg';
+import 'images/internpic.jpg';
