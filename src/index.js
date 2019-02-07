@@ -1,11 +1,7 @@
-import 'styles/main.scss';
-import 'styles/components.scss';
-import 'styles/media.scss';
-import 'styles/sections.scss';
+function requireAll(r) {
+  r.keys().forEach(r);
+}
 
-import 'js/init.js';
-import 'js/hashchange.js';
-
-import 'images/azorian.png';
-import 'images/teampic1.jpg';
-import 'images/internpic.jpg';
+requireAll(require.context('styles/', true));
+requireAll(require.context('js/', true));
+requireAll(require.context('images/', true));
