@@ -1,9 +1,4 @@
-$(window).load(function () {
-  trigger();
-  setInterval(() => trigger(), 6000);
-});
-
-function trigger() {
+const trigger = () => {
   for (let i = 0; i < 8; i++) {
     setTimeout(() => {
       $('#intro')
@@ -23,6 +18,11 @@ function trigger() {
   setTimeout(() => $.ripple.destroy(), 5000);
 }
 
+$(window).load(() => {
+  trigger();
+  setInterval(() => trigger(), 6000);
+});
+
 $('#sidenav-trigger').click(() => {
   $('#sidenav').animate({width: '100%'});
   $('#backdrop').show();
@@ -33,4 +33,10 @@ $('#close, #backdrop').click(() => {
   $('#sidenav').animate({width: '0'});
   $('#backdrop').hide();
   $('body').css({overflow: 'scroll'});
+});
+
+$.ajaxPrefilter(options => {
+  if (options.crossDomain && jQuery.support.cors) {
+    options.url = `https:////cors-anywhere.herokuapp.com/${options.url}`;
+  }
 });

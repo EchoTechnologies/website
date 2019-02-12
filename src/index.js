@@ -1,6 +1,4 @@
-function requireAll(r) {
-  r.keys().forEach(r);
-}
+const requireAll = r => r.keys().forEach(r);
 
 requireAll(require.context('styles/', true));
 requireAll(require.context('js/', true));

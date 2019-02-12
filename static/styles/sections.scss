@@ -179,3 +179,93 @@ footer {
     flex: 50%;
   }
 }
+
+/* donate */
+
+#donate {
+  background-color: #2e86c1;
+
+  .left {
+    color: #eee;
+  }
+
+  & > * {
+    flex: 1 1 0;
+  }
+
+  .right {
+    background-color: #eee;
+    padding: 2rem;
+
+    .title {
+      text-align: center;
+      margin-bottom: 0;
+    }
+
+    #goal {
+      font-weight: 300;
+
+      #raised {
+        font-weight: 600;
+        font-size: 1.5em;
+      }
+    }
+
+    #progress {
+      position: relative;
+      background-color: rgba(0, 0, 0, 0.1);
+      -webkit-box-shadow: inset 0 1px 2px 1px rgba(0,0,0,.1);
+      box-shadow: inset 0 1px 2px 1px rgba(0,0,0,.1);
+      margin: 0.2rem 0 1rem;
+
+      #meter {
+        position: absolute;
+        min-width: 19%;
+        display: block;
+        background-color: #21618c;
+        border-radius: 1rem;
+      }
+
+      &,
+      & > #meter {
+        height: 1rem;
+        border-radius: 1rem;
+      }
+    }
+
+    .button {
+      padding: 1rem;
+      margin-bottom: 0;
+    }
+  }
+}
+
+#donationpie {
+  background-color: #85c1e9;
+  color: #fff;
+}
+
+#sponsors {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  & > * {
+    flex: 0 1 100%;
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+}
