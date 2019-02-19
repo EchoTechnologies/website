@@ -6,10 +6,12 @@ const updateGfm = (page, callback) => {
     const $html = $(res);
     const raised = $html.find('.show-for-large .goal strong')[0].innerText;
     const total = $html.find('.show-for-large .goal .smaller').text().match(/\$[\d,]+/)[0];
-    const donators = $html.find('.donations-column-contain .supporters-list .supporter-name').map((i, el) => $(el).text().replace(/ +/g, ' ')).get().join(', ');
     page.find('#raised').text(raised);
     page.find('#total').text(total);
-    page.find('#donators').text(donators);
+
+    const donators = $html.find('.donations-column-contain .supporters-list .supporter-name').map((i, el) => $(el).text().replace(/ +/g, ' ')).get().join(', ');
+    const nonGfm = page.find('#donators').text();
+    page.find('#donators').text(`${nonGfm}, ${donators}`);
 
     const percentage = parseInt(raised.replace(/[\$,]/g, '')) / parseInt(total.replace(/[\$,]/g, '')) * 100;
     page.find('#meter').width(`${percentage}%`);
@@ -55,6 +57,7 @@ window.addEventListener('popstate', () => {
 $('#nav a, #sidenav a').click(function (e) {
   e.preventDefault();
   const path = $(this).attr('href');
+  if (!path) return;
   const updated = updatePage(path);
   if (updated) history.pushState({}, '', path);
 });
