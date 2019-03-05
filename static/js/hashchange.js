@@ -23,7 +23,11 @@ const fetchPage = (path, callback) => {
   $.get(path, res => {
     const $main = $($(res)[4]);
     if (path === '/donate.html') {
-      updateGfm($main, data => callback(data));
+      $('#loader').animate({opacity: 1});
+      updateGfm($main, data => {
+        callback(data);
+        $('#loader').animate({opacity: 0});
+      });
     } else {
       callback($main.html().trim());
     }
@@ -35,14 +39,17 @@ const updatePage = path => {
 
   loading = path;
   $('main').animate({opacity: 0}, () => {
+    $('body').css({overflow: 'hidden'});
     if (htmlMap[path]) {
       $('main').html(htmlMap[path]);
       $('main').animate({opacity: 1});
+      $('body').css({overflow: 'scroll'});
     } else {
       fetchPage(path, res => {
         htmlMap[path] = res;
         $('main').html(htmlMap[path]);
         $('main').animate({opacity: 1});
+        $('body').css({overflow: 'scroll'});
       });
     }
   });
