@@ -9,9 +9,9 @@ const updateGfm = (page, callback) => {
     page.find('#raised').text(raised);
     page.find('#total').text(total);
 
-    const donators = $html.find('.donations-column-contain .supporters-list .supporter-name').map((i, el) => $(el).text().replace(/ +/g, ' ')).get().join(', ');
-    const nonGfm = page.find('#donators').text();
-    page.find('#donators').text(`${nonGfm}, ${donators}`);
+    const donors = $html.find('.donations-column-contain .supporters-list .supporter-name').map((i, el) => $(el).text().replace(/ +/g, ' ')).get().join(', ');
+    const nonGfm = page.find('#donors').text();
+    page.find('#donors').text(`${nonGfm}, ${donors}`);
 
     const percentage = parseInt(raised.replace(/[\$,]/g, '')) / parseInt(total.replace(/[\$,]/g, '')) * 100;
     page.find('#meter').width(`${percentage}%`);
