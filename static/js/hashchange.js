@@ -34,6 +34,36 @@ const fetchPage = (path, callback) => {
   });
 };
 
+const createChart = () => {
+  $.getJSON('static/bom.json', json => {
+    const data = json.data.map(o => o.amount);
+    const labels = json.data.map(o => o.department);
+    const backgroundColor = json.data.map(o => o.color);
+    const chart = new Chart($('#chart'), {
+      type: 'pie',
+      data: {
+        datasets: [{data, backgroundColor}],
+        labels
+      },
+      options: {
+        legend: {display: false},
+        tooltips: {
+          callbacks: {
+            label: (tooltipItem, data) => {
+              const dataset = data.datasets[tooltipItem.datasetIndex];
+              const total = dataset.data.reduce((a, b) => a + b);
+              const value = dataset.data[tooltipItem.index];
+              const percentage = parseFloat((value / total * 100).toFixed(1));
+              return `$${value} (${percentage}%)`;
+            },
+            title: (tooltipItem, data) => data.labels[tooltipItem[0].index]
+          }
+        }
+      }
+    });
+  });
+};
+
 const updatePage = path => {
   if (path.startsWith('#') || loading === path) return false;
 
@@ -41,11 +71,13 @@ const updatePage = path => {
   $('main').animate({opacity: 0}, () => {
     $('body').css({overflow: 'hidden'});
     if (htmlMap[path]) {
+      if (path === '/donate.html') createChart();
       $('main').html(htmlMap[path]);
       $('main').animate({opacity: 1});
       $('body').css({overflow: 'scroll'});
     } else {
       fetchPage(path, res => {
+        if (path === '/donate.html') createChart();
         htmlMap[path] = res;
         $('main').html(htmlMap[path]);
         $('main').animate({opacity: 1});
@@ -74,6 +106,7 @@ $(window).ready(() => {
   const $main = $('main');
   if (loading === '/donate.html') {
     updateGfm($main, data => {
+      createChart();
       $main.html(data);
       htmlMap[loading] = $main.html().trim();
     });

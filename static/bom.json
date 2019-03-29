@@ -1,0 +1,49 @@
+{
+    "data": [
+        {
+            "department": "Mechanical/Eletrical",
+            "amount": 2052.06,
+            "color": "rgb(60, 120, 216)"
+        },
+        {
+            "department": "Management",
+            "amount": 2363.81,
+            "color": "rgb(35, 87, 171)"
+        },
+        {
+            "department": "Systems",
+            "amount": 684.43,
+            "color": "rgb(109, 158, 235)"
+        },
+        {
+            "department": "Programming",
+            "amount": 1245.29,
+            "color": "rgb(97, 141, 210)"
+        },
+        {
+            "department": "Manufacturing",
+            "amount": 63.63,
+            "color": "rgb(111, 168, 220)"
+        },
+        {
+            "department": "Media & Publications",
+            "amount": 530.79,
+            "color": "rgb(201, 218, 248)"
+        },
+        {
+            "department": "Outreach",
+            "amount": 422.16,
+            "color": "rgb(190, 206, 235)"
+        },
+        {
+            "department": "Finance",
+            "amount": 248.51,
+            "color": "rgb(153, 181, 228)"
+        },
+        {
+            "department": "Interns",
+            "amount": 1829.82,
+            "color": "rgb(164, 194, 244)"
+        }
+    ]
+}
