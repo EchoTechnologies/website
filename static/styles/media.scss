@@ -1,4 +1,15 @@
 @media only screen and (max-width: 800px) {
+    #sponsors {
+        .row {
+            flex-direction: column !important;
+            * {
+                margin-top: 1rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
     #nav {
         justify-content: center !important;
 

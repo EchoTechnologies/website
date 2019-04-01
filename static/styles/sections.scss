@@ -244,6 +244,10 @@ footer {
 #donationpie {
   background-color: #85c1e9;
   color: #fff;
+
+  & > * {
+    flex: 1 1 0;
+  }
 }
 
 #sponsors {
