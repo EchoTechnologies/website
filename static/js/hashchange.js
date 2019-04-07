@@ -21,7 +21,7 @@ const updateGfm = (page, callback) => {
 
 const fetchPage = (path, callback) => {
   $.get(path, res => {
-    const $main = $($(res)[4]);
+    const $main = $(res).find('#content');
     if (path === '/donate.html') {
       $('#loader').animate({opacity: 1});
       updateGfm($main, data => {
@@ -72,14 +72,14 @@ const updatePage = path => {
     $('body').css({overflow: 'hidden'});
     if (htmlMap[path]) {
       if (path === '/donate.html') createChart();
-      $('main').html(htmlMap[path]);
+      $('#content').html(htmlMap[path]);
       $('main').animate({opacity: 1});
       $('body').css({overflow: 'scroll'});
     } else {
       fetchPage(path, res => {
         if (path === '/donate.html') createChart();
         htmlMap[path] = res;
-        $('main').html(htmlMap[path]);
+        $('#content').html(htmlMap[path]);
         $('main').animate({opacity: 1});
         $('body').css({overflow: 'scroll'});
       });

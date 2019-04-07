@@ -5,41 +5,41 @@ html
 body
     include includes/header.pug
     main
-        #donate.section
-            .left
-                h2.title Donate
-                p The CARPA Initiative fosters the growth of students developing their skills to become engineers and grow as diligent colleagues. As a student-run organization, we are expected to finance independently through fundraisers, sponsorships, and donations from charitable individuals and corporations.
-                p These funds will be utilized to the fullest extent, as they will be used to develop new software, buy and manufacture parts to build our robots, purchase supplies for the mission, impact the community, and leave a legacy for future classes. As appreciation charitable  individuals and organizations will be included in all of our presentations and at our mission exposition in the form of various publications including banners, brochures, websites, and more.
-                p Our goal is to create “Ideas Worth hearing that inspire the communities we serve, through the products we develop, and the leaders we cultivate. We hope you choose to contribute to our mission and be a part of our success. Your contribution will have lasting, long-term effects beyond the immediate reward.
-            .right
-                h2.title GoFundMe
-                h3#goal
-                    span#raised $950
-                    | &nbsp;out of&nbsp;
-                    span#total $5,000
-                #progress
-                    #meter
-                p Tootsie roll cupcake dragée gummi bears pie. Lollipop ice cream donut caramels sesame snaps biscuit chocolate bar pudding. Candy canes jelly beans wafer apple pie dessert. Cake macaroon apple pie jujubes pie.
-                .button
-                    h2
-                        a(class='button' href='https://www.gofundme.com/echo-technology/donate' target='_blank') Donate Now
-        #donationpie.section
-            .left
-                h2.title Where does your donation go?
-                p Chocolate cake danish lemon drops halvah pastry. Carrot cake macaroon biscuit cheesecake icing cheesecake chocolate cake. Wafer pie liquorice macaroon cotton candy sesame snaps cake. Carrot cake pie carrot cake pudding.
-                p Jelly-o marzipan biscuit marzipan powder liquorice liquorice donut powder. Soufflé cupcake ice cream cake tootsie roll gingerbread gummies candy canes apple pie. Cake brownie dragée jelly-o soufflé. Lemon drops ice cream bonbon chocolate cake chocolate croissant chocolate.
-            .right
-                #nest
-                    canvas#chart(width='100%' height='100%')
-        #sponsors.section
-            h2.title Sponsors
-            .row
-                img(src='images/camsptso.png')
-                img(src='images/cams.jpeg')
-                img(src='images/motivo.png')
-            h2.title Donors
-            .row
-                p#donors Sara Hasson, David Messe, Ira Tochne
+        #content
+            #donate.section
+                .left
+                    h2.title Donate
+                    p The CARPA Initiative fosters the growth of students developing their skills to become engineers and grow as diligent colleagues. As a student-run organization, we are expected to finance independently through fundraisers, sponsorships, and donations from charitable individuals and corporations.
+                    p These funds will be utilized to the fullest extent, as they will be used to develop new software, buy and manufacture parts to build our robots, purchase supplies for the mission, impact the community, and leave a legacy for future classes. As appreciation charitable  individuals and organizations will be included in all of our presentations and at our mission exposition in the form of various publications including banners, brochures, websites, and more.
+                    p Our goal is to create “Ideas Worth hearing that inspire the communities we serve, through the products we develop, and the leaders we cultivate. We hope you choose to contribute to our mission and be a part of our success. Your contribution will have lasting, long-term effects beyond the immediate reward.
+                .right
+                    h2.title GoFundMe
+                    h3#goal
+                        span#raised $950
+                        | &nbsp;out of&nbsp;
+                        span#total $5,000
+                    #progress
+                        #meter
+                    p Following the objective of self sufficiency and mimicking industry standards, the finance team has been tasked with raising funds to fulfill - and hopefully exceed - our estimated budget of  approximately $10,000. These funds will be utilized to the fullest extent, as they will be used to develop new software, buy and manufacture parts to build our robots, purchase supplies for the mission, impact the community, and leave a legacy for future classes.
+                    .button
+                        h2
+                            a(class='button' href='https://www.gofundme.com/echo-technology/donate' target='_blank') Donate Now
+            #donationpie.section
+                .left
+                    h2.title Where does your donation go?
+                    p Your donation goes to not only the creation of the robots, but also our numerous outreach events. The graph to the right shows detailed statistics of our expenses categorized by departments within Echo Technologies.
+                .right
+                    #nest
+                        canvas#chart(width='100%' height='100%')
+            #sponsors.section
+                h2.title Sponsors
+                .row
+                    img(src='images/camsptso.png')
+                    img(src='images/cams.jpeg')
+                    img(src='images/motivo.png')
+                h2.title Donors
+                .row
+                    p#donors Sara Hasson, David Messe, Ira Tochne
 
     include includes/footer
 
